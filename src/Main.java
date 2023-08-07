@@ -22,7 +22,8 @@ public class Main {
 		
 		int option = -1;
 		do {
-			System.out.println("1. Create Container\n2. Create Ship\n3. Create Port\n4. Loading a container \n5. Unloading the container\n6. Ship sails to another port\n7. Ship is refueled\n8. Exit");
+			System.out.println("1. Create Container\n2. Create Ship\n3. Create Port\n4. Loading a container \n5. Unloading the container"
+					+ "\n6. Ship sails to another port\n7. Ship is refueled\n8. Exit\n9. View Ship Details");
 			
 			System.out.print("Select Option: ");
 			option = sc.nextInt();
@@ -32,8 +33,13 @@ public class Main {
 			switch(option) {
 			case 1: spm.createContainer();
 			break;
-			case 2: spm.viewContainerList();
+			case 2: spm.createShip();
 			break;
+			case 3: spm.createPort();
+			break;
+			case 4: spm.loadingContainer();
+			break;
+			case 9: spm.displayShipDetails();
 			default:
 				System.out.println("Try Again with correct input");
 			}
