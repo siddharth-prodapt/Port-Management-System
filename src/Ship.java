@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Ship {
-	static int pk = 100;
+	static int pk = 0;
 	private int shipId;
 	private int portId; //where the ship initially is
 	private int maxWeight; //max wt of containers
@@ -11,6 +13,7 @@ public class Ship {
 	private double fuelConsumption;
 	private int countBasicContainer;
 	private int countOfContainersLoaded = 0;
+	List<Integer> loadedContainersList = new ArrayList<Integer>();
 	
 	public Ship(int portId, int maxWeight, int maxContainers, int maxHeavyContainer, int countRefrigeratedContainers,
 			int countLiquidContainers, double fuelConsumption) {
@@ -90,6 +93,10 @@ public class Ship {
 
 	public void setShipId(int shipId) {
 		this.shipId = shipId;
+	}
+	public boolean addLoadedContainerId(int containerId) {
+		this.loadedContainersList.add(containerId);
+		return true;
 	}
 	
 	
